@@ -1,5 +1,5 @@
 # NASA Sakhi MVP - Backend Development Plan
-## Developer: Shashi (Backend Lead - 45% of Work)
+## Developer: Sashi (Backend Lead - 45% of Work)
 ## Timeline: February 3-7, 2026
 
 ---
@@ -107,7 +107,7 @@ You are responsible for building the complete backend infrastructure that powers
 ├─────────────────────────────────────────────────────┤
 │                                                      │
 │  ┌──────────────┐         ┌──────────────────┐     │
-│  │  SUNITHA     │   API   │     SHASHI       │     │
+│  │  SUNITHA     │   API   │     SASHI        │     │
 │  │  Frontend    │◄────────┤  (YOU) Backend   │     │
 │  │  (45%)       │ Contract│     (45%)        │     │
 │  │              │         │                  │     │
@@ -2439,7 +2439,7 @@ By **Feb 7 evening**, you must have:
 **Team Members:**
 - **Tanuj** (UI Lead, 10%) - Design feedback, QA, customer demo
 - **Sunitha** (Frontend Lead, 45%) - Registration form UI
-- **You (Shashi)** (Backend Lead, 45%) - API & database
+- **You (Sashi)** (Backend Lead, 45%) - API & database
 
 **Communication:**
 - Daily Standup: 10 AM (15 minutes)
