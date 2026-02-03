@@ -3,6 +3,9 @@
 
 import { NextResponse } from 'next/server';
 
+// Prevent static generation - this route must be dynamic
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     return NextResponse.json({

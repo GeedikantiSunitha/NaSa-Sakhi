@@ -4,6 +4,9 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
+// Prevent static generation - this route must be dynamic (requires database connection)
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     // Test database connection by creating a health check record
