@@ -1,27 +1,87 @@
-export default function Home() {
+// NASA Sakhi - Homepage
+// This is a minimal page to verify frontend is working
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="max-w-4xl mx-auto p-8 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          NaariSamata
-        </h1>
-        <h2 className="text-2xl text-gray-700 mb-6">
-          Organization Registration Portal
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      color: 'white',
+      padding: '20px',
+    }}>
+      <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+        🌟 NASA Sakhi
+      </h1>
+      <p style={{ fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center' }}>
+        Organization Registration Portal
+      </p>
+
+      <div style={{
+        background: 'rgba(255, 255, 255, 0.1)',
+        backdropFilter: 'blur(10px)',
+        borderRadius: '12px',
+        padding: '2rem',
+        maxWidth: '600px',
+        width: '100%',
+      }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
+          ✅ System Status
         </h2>
-        <p className="text-lg text-gray-600 mb-8">
-          Empowering women and children across India through accessible support services
-        </p>
-        <div className="bg-white rounded-lg shadow-lg p-6 text-left">
-          <h3 className="text-xl font-semibold mb-4">Project Status:</h3>
-          <ul className="space-y-2 text-gray-700">
-            <li>✅ Next.js 15 with TypeScript initialized</li>
-            <li>✅ Tailwind CSS configured</li>
-            <li>✅ Git repository connected to GitHub</li>
-            <li>🔄 Phase 0: Data migration scripts - In Progress</li>
-            <li>⏳ Phase 1: Database schema design - Pending</li>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <strong>Frontend:</strong> ✓ Running
+        </div>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <strong>Environment:</strong> {process.env.NODE_ENV || 'development'}
+        </div>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <strong>Next.js:</strong> {process.env.npm_package_dependencies_next || 'Installed'}
+        </div>
+
+        <div style={{
+          marginTop: '2rem',
+          padding: '1rem',
+          background: 'rgba(0, 0, 0, 0.2)',
+          borderRadius: '8px',
+        }}>
+          <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>
+            Test Endpoints:
+          </h3>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <a
+                href="/api/health"
+                style={{ color: '#fff', textDecoration: 'underline' }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🔍 API Health Check
+              </a>
+            </li>
+            <li>
+              <a
+                href="/api/db-test"
+                style={{ color: '#fff', textDecoration: 'underline' }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🗄️ Database Connection Test
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
+      <p style={{ marginTop: '2rem', opacity: 0.8 }}>
+        Empowering women and vulnerable children across India
+      </p>
     </div>
   );
 }

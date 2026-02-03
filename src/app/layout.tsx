@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
+// Root Layout
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "NaariSamata Organization Registration Portal",
-  description: "Register your organization to support women and children in India",
+  title: 'NASA Sakhi - Organization Registration Portal',
+  description: 'Empowering women and vulnerable children across India',
 };
 
 export default function RootLayout({
@@ -13,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

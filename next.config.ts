@@ -1,45 +1,19 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable standalone output for Docker deployments
+  /* config options here */
+  reactStrictMode: true,
+  poweredByHeader: false,
+
+  // Enable standalone output for deployment
   output: 'standalone',
 
-  // Image optimization configuration
-  images: {
-    domains: [
-      // Add your image domains here
-      'localhost',
-    ],
-    formats: ['image/avif', 'image/webp'],
-  },
+  // Optimize for production
+  compress: true,
 
-  // Webpack configuration
-  webpack: (config) => {
-    // Add any custom webpack config here
-    return config;
-  },
-
-  // Headers for security
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
+  // Environment variables exposed to browser
+  env: {
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   },
 };
 
