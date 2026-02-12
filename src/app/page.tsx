@@ -22,14 +22,21 @@ export default function HomePage() {
         Organization Registration Portal
       </p>
 
-      {/* Link to Component Test Page */}
-      <div className="mb-4">
+      {/* Links to Test Pages */}
+      <div className="mb-4 flex gap-4">
         <a
           href="/test-components"
           className="bg-white text-primary-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-block"
           style={{ textDecoration: 'none' }}
         >
           🧪 Test Components
+        </a>
+        <a
+          href="/test-api"
+          className="bg-white text-success-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-block"
+          style={{ textDecoration: 'none' }}
+        >
+          🔌 Test API Mocks
         </a>
       </div>
 

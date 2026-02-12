@@ -11,6 +11,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, description, className = '', id, ...props }, ref) => {
     const generatedId = useId();
     const checkboxId = id || generatedId;
+    const descriptionId = description ? `${checkboxId}-description` : undefined;
     
     return (
       <div className="flex items-start gap-3">
@@ -22,6 +23,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             ref={ref}
             id={checkboxId}
             type="checkbox"
+            aria-describedby={descriptionId}
             className={`
               w-5 h-5 rounded border-gray-300
               text-primary-600 focus:ring-2 focus:ring-primary-500
@@ -40,7 +42,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             {label}
           </label>
           {description && (
-            <p className="text-sm text-gray-500 mt-0.5">{description}</p>
+            <p 
+              id={descriptionId}
+              className="text-sm text-gray-500 mt-0.5"
+            >
+              {description}
+            </p>
           )}
         </div>
       </div>
